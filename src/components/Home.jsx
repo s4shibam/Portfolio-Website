@@ -59,7 +59,7 @@ function Home() {
         </div>
 
         <motion.div
-          className='image-wrapper relative z-10 max-w-lg xl:w-[45%] xl:max-w-lg'
+          className='image-wrapper relative z-10 max-w-lg xl:w-[45%] xl:max-w-[500px]'
           variants={fadeIn('right', 'spring', 100, 0.2, 1)}
         >
           <img src={fProfile} alt='Shibam' className='w-full' />
