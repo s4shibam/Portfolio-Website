@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    @apply select-none overflow-x-hidden scroll-smooth font-poppins;
+  }
+
+  body {
+    @apply relative overflow-x-hidden scroll-smooth bg-lightBG text-darkText dark:bg-darkBG dark:text-lightText;
+  }
+
+  /* Moving blob object */
+  .blob {
+    background: linear-gradient(
+      180deg,
+      rgba(47, 184, 255, 0.42) 31.77%,
+      #5c9df1 100%
+    );
+    @apply absolute h-[300px] w-[300px] blur-md transition-all duration-500 ease-in-out xl:h-[400px] xl:w-[400px] 2xl:h-[500px] 2xl:w-[500px];
+  }
+
+  .blob:hover {
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
+      inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
+      inset 300px 300px 0 0px #2b86c5;
+
+    @apply h-[520px] w-[520px] blur-2xl;
+  }
+
+  /* Button: hover fill change left to right */
+  .fill-button {
+    box-shadow: 0px 8px 20px 1px rgba(251, 161, 40, 0.42);
+    @apply flex items-center justify-center rounded-lg bg-gradient-to-br from-golden to-orangered px-4 py-2 text-2xl font-semibold uppercase tracking-wider text-darkText transition-colors duration-700 ease-in hover:bg-gradient-to-tl;
+  }
+
+  /* Form background glassmorphism interface */
+  .frame-BG {
+    @apply rounded-md border border-dullWhite bg-slate-200/70 p-4 shadow-lg backdrop-blur-lg dark:border-white/10 dark:bg-gray-500/10 dark:shadow-gray-800/80;
+  }
+
+  /* Divider - hr tag */
+  .divider {
+    @apply my-16 h-[2px] w-[80%] border-t-0 bg-transparent bg-gradient-to-r opacity-100;
+  }
+
+  /* Input box */
+  .input-box {
+    @apply w-full rounded-md border border-dullWhite bg-white p-4 font-medium tracking-wide outline-none dark:border-gray-600 dark:bg-darkText/60 lg:text-xl;
+  }
+
+  /* Navigation button */
+  .nav-button {
+    @apply cursor-pointer py-1 px-2 font-medium tracking-wider transition-colors duration-500 ease-in-out hover:text-orangered dark:hover:text-golden md:text-xl;
+  }
+
+  /* Page heading */
+  .heading {
+    @apply text-4xl font-bold text-darkText dark:text-slate-300 sm:text-6xl;
+  }
+
+  /* Page sub-heading */
+  .sub-heading {
+    @apply mt-2 mb-6 font-semibold text-orange-500 sm:text-2xl xl:mb-14;
+  }
+}
