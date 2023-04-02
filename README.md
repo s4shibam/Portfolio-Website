@@ -40,13 +40,6 @@
 
 <br/>
 
-**Developer Dependencies**
-
-- ESLint
-- Prettier
-
-<br/>
-
 **Demo Video**
 
 <img src="./media/portfolio-tour.gif" alt="Portfolio Tour">
