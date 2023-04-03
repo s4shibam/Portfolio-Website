@@ -21,7 +21,7 @@ function Education() {
           {EducationData.map((data, index) => (
             <motion.div
               className='phase frame-BG flex flex-col items-center justify-center'
-              variants={slideIn('right', 'spring', 25, 0.5 * index, 0.75)}
+              variants={slideIn('down', 'spring', 25, 0.5 * index, 0.75)}
               key={data.degree}
             >
               <img

@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply relative overflow-x-hidden scroll-smooth bg-lightBG text-darkText dark:bg-darkBG dark:text-lightText;
+    @apply relative overflow-x-hidden bg-lightBG text-darkText dark:bg-darkBG dark:text-lightText;
   }
 
   /* Moving blob object */

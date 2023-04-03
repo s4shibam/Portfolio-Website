@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { fadeIn, slideIn } from '../animation';
 import { knowledgeObj } from '../assets';
 import { ExperienceData, ProfileData } from '../constants';
 import { SectionWrapper } from '../hoc';
@@ -12,11 +11,10 @@ function Profile() {
         Coding Profiles
       </p>
       <div className='profile-data flex flex-wrap justify-center gap-6 xl:pt-8'>
-        {ProfileData.map((data, index) => (
-          <motion.div
-            className={`skill frame-BG flex w-full max-w-[280px] flex-col rounded-xl border-2 p-6 text-center ${data.borderColor}`}
+        {ProfileData.map((data) => (
+          <div
+            className={`skill frame-BG flex w-full max-w-[300px] flex-col rounded-xl border-2 p-6 text-center ${data.borderColor}`}
             key={data.name}
-            variants={fadeIn('right', 'spring', 25, 0.5 * index, 0.75)}
           >
             <div className='mx-auto'>
               <img src={data.icon} alt={data.name} className='w-20 xl:w-32' />
@@ -24,15 +22,17 @@ function Profile() {
             <div className='details my-3 pr-0'>
               <p className='mb-2 text-2xl font-semibold'>{data.name}</p>
               <hr className='mb-3 h-px w-full border-0 bg-orange-500' />
-              {data.points.map((point, index) => (
-                <li
-                  className='w-full list-none text-left text-sm sm:text-base 2xl:text-base'
-                  key={index}
-                >
-                  <i className='bx bx-plus bx-sm mr-1 align-middle text-orangered'></i>
-                  {point}
-                </li>
-              ))}
+              <div className='points-wrapper mx-auto w-fit'>
+                {data.points.map((point, index) => (
+                  <li
+                    className='w-full list-none text-left text-sm sm:text-base 2xl:text-base'
+                    key={index}
+                  >
+                    <i className='bx bx-plus bx-sm mr-1 align-middle text-orangered'></i>
+                    {point}
+                  </li>
+                ))}
+              </div>
             </div>
             <motion.a
               className='fill-button mt-2 text-xl shadow-none'
@@ -43,7 +43,7 @@ function Profile() {
             >
               LINK
             </motion.a>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
@@ -59,11 +59,10 @@ function Experience() {
       </p>
       <div className='flex flex-wrap justify-center gap-6 pb-8 xl:pt-8'>
         {ExperienceData.map((data, index) => (
-          <motion.div
+          <div
             className={`skill frame-BG flex flex-col rounded-xl border-2 p-6 text-center ${
               index == 0 ? 'border-red-500 dark:border-red-500' : null
             }`}
-            variants={slideIn('right', 'spring', 25, 0.5 * index, 0.75)}
             key={data.designation}
           >
             <div className='mx-auto'>
@@ -98,7 +97,7 @@ function Experience() {
                 </a>
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
@@ -121,7 +120,7 @@ function Exposure() {
         </motion.div>
 
         <Profile />
-        <hr className='divider mx-auto mb-0 bg-gradient-to-l from-transparent via-golden to-transparent' />
+        <hr className='divider mx-auto mb-0 mt-20 bg-gradient-to-l from-transparent via-golden to-transparent' />
         <hr className='divider mx-auto mt-2 bg-gradient-to-l from-transparent via-orangered to-transparent' />
         <Experience />
         {/* <motion.div className='absolute right-10 top-0 -z-10 aspect-square w-44 rounded-full bg-cyan-300 blur-[170px]'></motion.div> */}
