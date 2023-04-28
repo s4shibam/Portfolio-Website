@@ -67,4 +67,17 @@
   .sub-heading {
     @apply mt-2 mb-6 font-semibold text-orange-500 sm:text-2xl xl:mb-14;
   }
+
+  /* Swiper JS CSS */
+  .swiper-pagination {
+    @apply relative bottom-4 w-60;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    @apply dark:bg-lightBG;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    @apply bg-orangered dark:bg-golden;
+  }
 }

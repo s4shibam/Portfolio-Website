@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Autoplay } from 'swiper';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { zoomIn } from '../animation';
 import { searchObj } from '../assets';
 import { SkillSetData } from '../constants';
 import { SectionWrapper } from '../hoc';
@@ -21,10 +20,7 @@ function SkillSet() {
         <motion.div className='absolute right-4 top-16 hidden w-64 select-none opacity-80 drop-shadow-lg xl:block'>
           <img src={searchObj} alt='Obj' />
         </motion.div>
-        <motion.div
-          className='skills-wrapper relative xl:py-10'
-          variants={zoomIn(0.25, 0.5)}
-        >
+        <div className='skills-wrapper relative xl:py-10'>
           {SkillSetData.map((type) => (
             <Swiper
               className='mb-2 w-full py-4'
@@ -47,7 +43,12 @@ function SkillSet() {
                     whileHover={{ transform: 'translateY(-1rem)' }}
                   >
                     <div className='mr-3 flex items-center justify-center p-1'>
-                      <img src={skill.icon} alt={skill.name} className='w-32' />
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        loading='lazy'
+                        className='w-32'
+                      />
                     </div>
                     <div className='details py-3 pr-0'>
                       <p className='text-2xl font-semibold'>{skill.name}</p>
@@ -67,7 +68,7 @@ function SkillSet() {
             </Swiper>
           ))}
           <motion.div className='absolute right-10 -top-10 -z-10 aspect-square w-32 rounded-full bg-golden blur-[170px]'></motion.div>
-        </motion.div>
+        </div>
       </div>
       <hr className='divider mb-0 bg-gradient-to-r from-golden to-transparent' />
       <hr className='divider mt-2 bg-gradient-to-r from-orangered to-transparent' />

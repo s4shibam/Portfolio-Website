@@ -25,6 +25,7 @@ function About() {
             variants={fadeIn('left', 'spring', 50, 0.2, 1)}
           >
             <img
+              loading='lazy'
               src={bProfile}
               alt='Shibam'
               className='mx-auto -translate-y-8 drop-shadow-lg'

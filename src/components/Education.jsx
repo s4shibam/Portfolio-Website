@@ -15,7 +15,7 @@ function Education() {
           An investment in knowledge pays the best interest.
         </p>
         <motion.div className='absolute left-4 top-16 hidden w-60 select-none opacity-70 drop-shadow-lg xl:block'>
-          <img src={notesObj} alt='Obj' />
+          <img src={notesObj} alt='Obj' loading='lazy' />
         </motion.div>
         <div className='education-details relative flex flex-col items-center justify-center gap-8 xl:flex-row xl:justify-evenly xl:py-8'>
           {EducationData.map((data, index) => (

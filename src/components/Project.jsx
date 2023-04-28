@@ -1,4 +1,10 @@
 import { motion } from 'framer-motion';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { ideaObj } from '../assets';
 import { ProjectData } from '../constants';
 import { SectionWrapper } from '../hoc';
@@ -17,15 +23,37 @@ function Project() {
           <img src={ideaObj} alt='Obj' />
         </motion.div>
       </div>
-      <div className='project-details relative flex flex-wrap justify-center gap-10 xl:py-10'>
+      <Swiper
+        className='project-details swiper_container relative gap-10 xl:py-10'
+        effect={'coverflow'}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false
+        }}
+        speed={1500}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows: false
+        }}
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        modules={[Autoplay, EffectCoverflow, Pagination]}
+      >
         {ProjectData.map((project) => (
-          <div
-            className={`project frame-BG flex w-full max-w-[480px] flex-col rounded-xl border-2 p-4 text-center ${project.borderColor}`}
+          <SwiperSlide
+            className={`project frame-BG w-full max-w-[480px] rounded-xl border-2 p-4 text-center ${project.borderColor}`}
             key={project.name}
           >
             <img
               src={project.image}
               alt={project.name}
+              loading='lazy'
               className={`w-full rounded-lg border-2 drop-shadow-xl ${project.borderColor}`}
             />
             <p className='mt-4 text-center text-xl font-semibold uppercase tracking-wide text-orangered xl:text-3xl'>
@@ -66,10 +94,13 @@ function Project() {
                 Demo
               </motion.a>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-        <motion.div className='absolute left-10 -top-10 -z-10 aspect-square w-44 rounded-full bg-slate-500 blur-[160px]'></motion.div>
-      </div>
+        <div className='slider-controller mt-6 flex items-center justify-center'>
+          <div className='swiper-pagination'></div>
+        </div>
+      </Swiper>
+      <motion.div className='absolute left-10 -top-10 -z-10 aspect-square w-44 rounded-full bg-slate-500 blur-[160px]'></motion.div>
       <hr className='divider ml-auto mb-0 bg-gradient-to-l from-golden to-transparent' />
       <hr className='divider mt-2 ml-auto bg-gradient-to-l from-orangered to-transparent' />
     </div>

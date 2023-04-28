@@ -17,7 +17,12 @@ function Profile() {
             key={data.name}
           >
             <div className='mx-auto'>
-              <img src={data.icon} alt={data.name} className='w-20 xl:w-32' />
+              <img
+                src={data.icon}
+                alt={data.name}
+                loading='lazy'
+                className='w-20 xl:w-32'
+              />
             </div>
             <div className='details my-3 pr-0'>
               <p className='mb-2 text-2xl font-semibold'>{data.name}</p>
@@ -66,7 +71,12 @@ function Experience() {
             key={data.designation}
           >
             <div className='mx-auto'>
-              <img src={data.icon} alt={data.designation} className='w-32' />
+              <img
+                src={data.icon}
+                alt={data.designation}
+                loading='lazy'
+                className='w-32'
+              />
             </div>
             <div className='details my-3 pr-0'>
               <p className='mb-2 text-2xl font-semibold'>{data.designation}</p>

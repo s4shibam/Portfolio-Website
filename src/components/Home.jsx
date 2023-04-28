@@ -28,7 +28,7 @@ function Home() {
           >
             Welcome to my stunningly artistic portfolio!{' '}
           </motion.p>
-          <div className='social-links-wrapper z-10 mt-6 space-x-3 sm:space-x-4'>
+          <div className='social-links-wrapper z-10 mt-6 space-x-2 sm:space-x-4'>
             {SocialLinksData.map((link, index) => (
               <motion.a
                 href={link.href}
