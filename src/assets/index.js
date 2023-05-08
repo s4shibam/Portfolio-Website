@@ -43,11 +43,11 @@ import typescript from './tech/typescript.webp';
 import viteJS from './tech/vite-js.webp';
 import vsCode from './tech/vs-code.webp';
 
+import aboutImg from './about-image.webp';
 import bms from './bms.webp';
 import contentWriter from './content-writer.webp';
 import jobSearch from './job-search.webp';
-import bProfile from './profile-image-border.webp';
-import fProfile from './profile-image-fill.webp';
+import fProfile from './profile-image.webp';
 import tint from './tint.webp';
 import webDeveloper from './web-developer.webp';
 
@@ -96,7 +96,7 @@ export {
   bms,
   contentWriter,
   jobSearch,
-  bProfile,
+  aboutImg,
   fProfile,
   tint,
   webDeveloper
