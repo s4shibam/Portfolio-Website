@@ -4,6 +4,7 @@ import { fadeIn, zoomIn } from '../animation';
 import { fProfile } from '../assets';
 import { SocialLinksData } from '../constants';
 import { SectionWrapper } from '../hoc';
+import Background from './Background';
 
 function Home() {
   return (
@@ -34,18 +35,18 @@ function Home() {
                 href={link.href}
                 key={link.href}
                 target='_blank'
-                className='frame group inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-orangered shadow-orangered transition-all duration-500 ease-in-out hover:bg-orangered/80 sm:h-12 sm:w-12 [&>*]:text-2xl [&>*]:text-orangered'
+                className='frame group inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-orangered shadow-orangered transition-all duration-500 ease-in-out hover:bg-orangered sm:h-12 sm:w-12 [&>*]:text-2xl [&>*]:text-orangered'
                 variants={zoomIn(0.25 * index, 0.5)}
               >
                 <i
-                  className={`${link.icon} group-hover:text-darkText dark:group-hover:text-dullWhite`}
+                  className={`${link.icon} bx-sm transition-colors duration-500 ease-in-out group-hover:text-darkText dark:group-hover:text-dullWhite`}
                 />
               </motion.a>
             ))}
           </div>
           <div className='button-wrapper mt-8'>
             <motion.a
-              className='fill-button z-10 mx-auto w-fit rounded-full px-6 text-xl font-medium normal-case xl:mx-0'
+              className='fill-button z-10 mx-auto w-fit rounded-full px-6 text-xl font-medium normal-case before:rounded-full xl:mx-0'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               href='https://github.com/s4shibam/s4shibam/raw/main/resume/Shibam_Saha_Resume_Public.pdf'
@@ -65,10 +66,11 @@ function Home() {
           <img src={fProfile} alt='Shibam' className='w-full' />
           <motion.div className='absolute right-0 top-0 -z-10 aspect-square w-44 rounded-full bg-pink-500 blur-[170px] md:w-60'></motion.div>
         </motion.div>
-        <div className='blob animate-travel'></div>
+        {/* <div className='blob animate-travel'></div> */}
       </div>
       <hr className='divider ml-auto mb-0 bg-gradient-to-l from-golden to-transparent' />
       <hr className='divider mt-2 ml-auto bg-gradient-to-l from-orangered to-transparent' />
+      <Background />
     </div>
   );
 }

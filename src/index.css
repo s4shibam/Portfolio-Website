@@ -7,11 +7,16 @@
 
 @layer components {
   html {
-    @apply select-none overflow-x-hidden scroll-smooth font-poppins;
+    @apply select-none scroll-pt-24 overflow-x-hidden scroll-smooth font-poppins;
   }
 
   body {
-    @apply relative overflow-x-hidden bg-lightBG text-darkText dark:bg-darkBG dark:text-lightText;
+    @apply relative overflow-x-hidden bg-lightBG text-darkText  dark:bg-darkBG dark:text-lightText;
+  }
+
+  /* Scroll spy CSS */
+  .active-scroll-spy {
+    @apply text-orangered dark:text-golden;
   }
 
   /* Moving blob object */
@@ -32,10 +37,20 @@
     @apply h-[520px] w-[520px] blur-2xl;
   }
 
-  /* Button: hover fill change left to right */
+  /* Button: fill direction change on hover */
   .fill-button {
     box-shadow: 0px 8px 20px 1px rgba(251, 161, 40, 0.42);
-    @apply flex items-center justify-center rounded-lg bg-gradient-to-br from-golden to-orangered px-4 py-2 text-2xl font-semibold uppercase tracking-wider text-darkText transition-colors duration-700 ease-in hover:bg-gradient-to-tl;
+    @apply relative z-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-golden to-orangered px-4 py-2 text-2xl font-semibold uppercase tracking-wider text-darkText;
+  }
+
+  .fill-button::before {
+    position: absolute;
+    content: '';
+    @apply absolute inset-0 -z-10 rounded-lg bg-gradient-to-tl opacity-0 transition-opacity duration-700 ease-in-out hover:before:opacity-100;
+  }
+
+  .fill-button:hover::before {
+    @apply opacity-100;
   }
 
   /* Form background glassmorphism interface */
@@ -56,6 +71,11 @@
   /* Navigation button */
   .nav-button {
     @apply cursor-pointer py-1 px-2 font-medium tracking-wider transition-colors duration-500 ease-in-out hover:text-orangered dark:hover:text-golden md:text-xl;
+  }
+
+  /* Object */
+  .obj {
+    @apply absolute right-4 -top-8 hidden w-64 select-none drop-shadow-lg xl:block;
   }
 
   /* Page heading */

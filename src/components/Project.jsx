@@ -11,20 +11,20 @@ import { SectionWrapper } from '../hoc';
 
 function Project() {
   return (
-    <div className='project'>
+    <>
       <div className='content-wrapper'>
         <p className='heading text-right'>
           Project <span className='text-orangered'>Works! </span>
         </p>
         <p className='sub-heading text-right'>
-          Stay humble. Let your work speak for you.{' '}
+          Stay humble. Let your work speak for you.{' '}
         </p>
-        <motion.div className='absolute left-4 top-14 hidden w-64 select-none opacity-80 drop-shadow-lg xl:block'>
+        <motion.div className='obj left-4'>
           <img src={ideaObj} alt='Obj' />
         </motion.div>
       </div>
       <Swiper
-        className='project-details swiper_container relative gap-10 xl:py-10'
+        className='project-details swiper_container relative gap-10 xl:py-8'
         effect={'coverflow'}
         autoplay={{
           delay: 4000,
@@ -103,7 +103,7 @@ function Project() {
       <motion.div className='absolute left-10 -top-10 -z-10 aspect-square w-44 rounded-full bg-slate-500 blur-[160px]'></motion.div>
       <hr className='divider ml-auto mb-0 bg-gradient-to-l from-golden to-transparent' />
       <hr className='divider mt-2 ml-auto bg-gradient-to-l from-orangered to-transparent' />
-    </div>
+    </>
   );
 }
 

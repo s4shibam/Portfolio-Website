@@ -40,12 +40,12 @@ function Contact() {
   }
 
   return (
-    <div className='contact'>
+    <>
       <p className='heading'>
         Reach <span className='text-orangered'>Me </span> Out!
       </p>
       <p className='sub-heading'>Connection starts with communication. </p>
-      <motion.div className='absolute right-4 top-10 hidden w-64 select-none opacity-70 drop-shadow-lg xl:block'>
+      <motion.div className='obj -top-20'>
         <img src={messageObj} alt='Obj' />
       </motion.div>
 
@@ -88,16 +88,11 @@ function Contact() {
           required
         />
 
-        <motion.button
-          className='fill-button mt-1 shadow-none'
-          type='submit'
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.98 }}
-        >
+        <button className='fill-button mt-1 shadow-none' type='submit'>
           {loading ? 'Sending...' : 'Send'}
-        </motion.button>
+        </button>
       </form>
-    </div>
+    </>
   );
 }
 

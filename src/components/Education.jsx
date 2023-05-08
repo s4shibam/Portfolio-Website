@@ -6,7 +6,7 @@ import { SectionWrapper } from '../hoc';
 
 function Education() {
   return (
-    <div className='education'>
+    <>
       <div className='content-wrapper mb-16'>
         <p className='heading text-right'>
           <span className='text-orangered'>My </span>Education
@@ -14,7 +14,7 @@ function Education() {
         <p className='sub-heading text-right'>
           An investment in knowledge pays the best interest.
         </p>
-        <motion.div className='absolute left-4 top-16 hidden w-60 select-none opacity-70 drop-shadow-lg xl:block'>
+        <motion.div className='obj left-4'>
           <img src={notesObj} alt='Obj' loading='lazy' />
         </motion.div>
         <div className='education-details relative flex flex-col items-center justify-center gap-8 xl:flex-row xl:justify-evenly xl:py-8'>
@@ -72,7 +72,7 @@ function Education() {
       </div>
       <hr className='divider ml-auto mb-0 bg-gradient-to-l from-golden to-transparent' />
       <hr className='divider mt-2 ml-auto bg-gradient-to-l from-orangered to-transparent' />
-    </div>
+    </>
   );
 }
 

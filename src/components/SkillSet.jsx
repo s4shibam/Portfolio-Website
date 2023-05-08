@@ -9,7 +9,7 @@ import { SectionWrapper } from '../hoc';
 function SkillSet() {
   const page = window.innerWidth >= 1920 ? 3 : window.innerWidth >= 768 ? 2 : 1;
   return (
-    <div className='skill-set'>
+    <>
       <div className='content-wrapper mb-16'>
         <p className='heading'>
           Skills <span className='text-orangered'>I have.</span>
@@ -17,7 +17,7 @@ function SkillSet() {
         <p className='sub-heading'>
           Every skill you acquire doubles your odds of success.{' '}
         </p>
-        <motion.div className='absolute right-4 top-16 hidden w-64 select-none opacity-80 drop-shadow-lg xl:block'>
+        <motion.div className='obj'>
           <img src={searchObj} alt='Obj' />
         </motion.div>
         <div className='skills-wrapper relative xl:py-10'>
@@ -72,7 +72,7 @@ function SkillSet() {
       </div>
       <hr className='divider mb-0 bg-gradient-to-r from-golden to-transparent' />
       <hr className='divider mt-2 bg-gradient-to-r from-orangered to-transparent' />
-    </div>
+    </>
   );
 }
 

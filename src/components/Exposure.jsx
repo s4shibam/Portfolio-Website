@@ -117,7 +117,7 @@ function Experience() {
 // Exposure Section
 function Exposure() {
   return (
-    <div className='exposure'>
+    <>
       <div className='content-wrapper mb-16'>
         <p className='heading'>
           <span className='text-orangered'>Exposure </span> in domain
@@ -125,7 +125,7 @@ function Exposure() {
         <p className='sub-heading'>
           Without exposure, there can be no discovery.
         </p>
-        <motion.div className='absolute right-4 top-10 hidden w-72 select-none opacity-80 drop-shadow-lg xl:block'>
+        <motion.div className='obj -top-12'>
           <img src={knowledgeObj} alt='Obj' />
         </motion.div>
 
@@ -137,7 +137,7 @@ function Exposure() {
       </div>
       <hr className='divider mb-0 bg-gradient-to-r from-golden to-transparent' />
       <hr className='divider mt-2 bg-gradient-to-r from-orangered to-transparent' />
-    </div>
+    </>
   );
 }
 

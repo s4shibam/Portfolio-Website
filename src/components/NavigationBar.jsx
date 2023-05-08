@@ -84,7 +84,7 @@ function NavigationBar() {
             to='/'
             onClick={() => {
               setActive('');
-              window.scrollTo(0, 0);
+              location.reload();
             }}
           >
             <p className='cursor-pointer font-pacifico text-3xl tracking-wider text-orangered drop-shadow-md lg:text-4xl'>
@@ -98,7 +98,7 @@ function NavigationBar() {
               <a
                 href={`#${nav.link}`}
                 className={`nav-button ${
-                  active === nav.name ? 'text-orangered dark:text-golden' : null
+                  active === nav.name ? 'text-orangered dark:text-golden' : ''
                 }`}
                 key={nav.link}
                 onClick={() => setActive(nav.name)}
@@ -160,32 +160,3 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
-
-{
-  /* <div
-        className={`hamburger-wrapper fixed right-0 z-30 mt-1 h-screen w-full text-center transition-all duration-500 ease-in-out xl:hidden
-              ${!toggle ? '-top-[1000px] opacity-0' : 'top-12 opacity-100'}`}
-        onClick={() => setToggle(!toggle)}
-      >
-        <div className='flex flex-col justify-center bg-golden py-6'>
-          {NavigationBarData.map((nav) => (
-            <a
-              href={`#${nav.link}`}
-              className={`nav-button cursor-pointer px-4 py-2 text-2xl font-semibold uppercase tracking-wider text-darkText hover:bg-black/10 dark:hover:text-orangered ${
-                active === nav.name ? 'bg-black/10 text-orangered' : null
-              }`}
-              key={nav.link}
-              onClick={() => {
-                setToggle(!toggle);
-                setActive(nav.name);
-              }}
-            >
-              {nav.name}
-            </a>
-          ))}
-          <div className='flex w-full justify-center'>
-            <SwitchTheme />
-          </div>
-        </div>
-      </div> */
-}
