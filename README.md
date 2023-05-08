@@ -32,11 +32,12 @@
 
 **Additional Libraries**
 
+- Boxicons
 - Email JS
 - Framer Motion
-- Swiper JS
 - React Router DOM
-- Boxicons
+- Swiper JS
+- TS Particles
 
 <br/>
 
