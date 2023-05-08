@@ -27,10 +27,10 @@ function Project() {
         className='project-details swiper_container relative gap-10 xl:py-10'
         effect={'coverflow'}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false
         }}
-        speed={1500}
+        speed={1000}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
@@ -47,7 +47,7 @@ function Project() {
       >
         {ProjectData.map((project) => (
           <SwiperSlide
-            className={`project frame-BG w-full max-w-[480px] rounded-xl border-2 p-4 text-center ${project.borderColor}`}
+            className={`project frame-BG w-full max-w-[480px] rounded-xl border-2 p-4 text-center dark:bg-black/70 ${project.borderColor}`}
             key={project.name}
           >
             <img

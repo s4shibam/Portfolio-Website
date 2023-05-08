@@ -1,7 +1,7 @@
 import 'boxicons';
 import { motion } from 'framer-motion';
 import { fadeIn, slideIn } from '../animation';
-import { bProfile, colorsObj } from '../assets';
+import { aboutImg, colorsObj } from '../assets';
 import { AboutData } from '../constants';
 import { SectionWrapper } from '../hoc';
 
@@ -19,18 +19,18 @@ function About() {
           <img src={colorsObj} alt='Obj' />
         </motion.div>
 
-        <div className='about flex flex-col items-center justify-end py-6 xl:flex-row xl:gap-8'>
+        <div className='about flex flex-col items-center justify-end py-6 xl:flex-row gap-6 xl:gap-12'>
           <motion.div
-            className='relative w-full lg:min-w-[350px] xl:max-w-[450px]'
+            className='relative w-[90%] sm:w-[60%] lg:min-w-[350px]'
             variants={fadeIn('left', 'spring', 50, 0.2, 1)}
           >
             <img
               loading='lazy'
-              src={bProfile}
+              src={aboutImg}
               alt='Shibam'
-              className='mx-auto -translate-y-8 drop-shadow-lg'
+              className='mx-auto drop-shadow-lg'
             />
-            <div className='absolute left-0 bottom-16 -z-10 aspect-square w-44 rounded-full bg-cyan-600 blur-[160px] md:w-60'></div>
+            <div className='absolute left-0 bottom-24 -z-10 aspect-square w-44 rounded-full bg-cyan-600 blur-[160px] md:w-48'></div>
           </motion.div>
 
           <motion.div
@@ -42,7 +42,7 @@ function About() {
                 className='my-4 list-none text-justify lg:text-lg 2xl:text-xl'
                 key={index}
               >
-                <i className='bx bx-link bx-sm mr-2 align-middle text-orangered'></i>
+                <i className='bx bxs-balloon bx-sm mr-2 align-middle text-orangered dark:text-golden'></i>
                 {about}
               </li>
             ))}
