@@ -39,16 +39,11 @@ function SkillSet() {
               {type.skills.map((skill) => (
                 <SwiperSlide key={skill.name}>
                   <motion.div
-                    className={`skill frame-BG flex w-fit max-w-lg rounded-xl border-2 p-3 ${skill.borderColor}`}
+                    className={`skill frame-BG flex w-fit max-w-lg rounded-xl border-2 p-2.5 ${skill.borderColor}`}
                     whileHover={{ transform: 'translateY(-1rem)' }}
                   >
-                    <div className='mr-3 flex items-center justify-center p-1'>
-                      <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        loading='lazy'
-                        className='w-32'
-                      />
+                    <div className='mr-3 flex w-32 items-center justify-center rounded-full'>
+                      <img src={skill.icon} alt={skill.name} loading='lazy' />
                     </div>
                     <div className='details py-3 pr-0'>
                       <p className='text-2xl font-semibold'>{skill.name}</p>
