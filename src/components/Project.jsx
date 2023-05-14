@@ -33,6 +33,7 @@ function Project() {
         speed={1000}
         grabCursor={true}
         centeredSlides={true}
+        loopedSlides={3}
         loop={true}
         slidesPerView={'auto'}
         coverflowEffect={{
