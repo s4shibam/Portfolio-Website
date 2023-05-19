@@ -49,7 +49,7 @@ function Home() {
               className='fill-button z-10 mx-auto w-fit rounded-full px-6 text-xl font-medium normal-case before:rounded-full xl:mx-0'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href='https://github.com/s4shibam/s4shibam/raw/main/resume/Shibam_Saha_Resume_Public.pdf'
+              href='https://github.com/s4shibam/s4shibam/raw/main/resume/Shibam_Saha_Resume.pdf'
               download
               variants={fadeIn('left', 'spring', 100, 0.75, 1)}
             >
