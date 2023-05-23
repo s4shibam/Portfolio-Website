@@ -8,7 +8,7 @@ import Background from './Background';
 
 function Home() {
   return (
-    <div className='home relative mx-auto flex w-full flex-col pt-6'>
+    <div className='home relative mx-auto flex w-full flex-col pt-24 xl:pt-6'>
       <div className='content-wrapper my-10 flex h-[85vh] flex-col-reverse items-center justify-evenly xl:flex-row'>
         <div className='intro-wrapper relative z-10 text-center md:mt-6 xl:mt-0 xl:text-left'>
           <motion.p
@@ -22,12 +22,12 @@ function Home() {
             variants={fadeIn('left', 'spring', 100, 0.2, 1)}
           >
             Shibam Saha!
-          </motion.p>{' '}
+          </motion.p>
           <motion.p
             className='z-10 ml-1 font-semibold tracking-wide lg:text-xl 2xl:text-2xl'
             variants={fadeIn('left', 'spring', 100, 0.3, 1)}
           >
-            Crafting elegant solutions through the art of code{' '}
+            Crafting elegant solutions through the art of code &nbsp;
             <span className='text-orangered dark:text-golden'>&lt;/&gt;</span>
           </motion.p>
           <div className='social-links-wrapper z-10 mt-6 space-x-2 sm:space-x-4'>
